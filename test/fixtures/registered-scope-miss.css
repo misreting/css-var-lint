@@ -1,0 +1,17 @@
+/* --accent is registered, so it is never guaranteed-invalid; a scope miss
+   here falls back to the registered initial-value instead of going unstyled,
+   which is a different consequence than the unregistered case and should be
+   described that way. */
+@property --accent {
+  syntax: "<color>";
+  inherits: false;
+  initial-value: black;
+}
+
+.card {
+  .dark-theme {
+    --accent: purple;
+  }
+
+  color: var(--accent);
+}

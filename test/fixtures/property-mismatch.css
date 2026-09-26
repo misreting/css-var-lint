@@ -1,0 +1,10 @@
+/* --gap is registered as a <length>, but declared here as a color. */
+@property --gap {
+  syntax: "<length>";
+  inherits: false;
+  initial-value: 0px;
+}
+
+.card {
+  --gap: red;
+}

@@ -1,0 +1,10 @@
+/* --x is only ever declared *inside* the nested .dark-theme rule. The outer
+   .card rule's own declaration references it, but a rule can never receive
+   a value from something nested inside it — this is a certain miss. */
+.card {
+  .dark-theme {
+    --x: red;
+  }
+
+  color: var(--x);
+}

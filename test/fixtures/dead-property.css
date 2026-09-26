@@ -1,0 +1,8 @@
+/* --unused-token is declared but var(--unused-token) never appears anywhere. */
+:root {
+  --unused-token: 4px;
+}
+
+.card {
+  color: red;
+}

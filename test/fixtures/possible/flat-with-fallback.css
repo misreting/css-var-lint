@@ -1,0 +1,11 @@
+/* Same ambiguous scope as flat-no-fallback.css, but this one supplies a
+   fallback. Silent by default entirely: VL001 is "possible" (opt-in only),
+   and VL002 doesn't apply because the fallback makes this degrade gracefully
+   instead of going unstyled. */
+.dark-theme {
+  --x: red;
+}
+
+.card {
+  color: var(--x, blue);
+}

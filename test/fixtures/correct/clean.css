@@ -1,0 +1,42 @@
+/* A project with no findings — including with --include-possible. */
+
+:root {
+  --gap: 1rem;
+  --brand-color: blue;
+}
+
+.card {
+  padding: var(--gap);
+  color: var(--brand-color);
+}
+
+/* --accent is scoped to .dark-theme, and every reference is provably nested
+   inside it via CSS nesting, with a fallback besides. */
+.dark-theme {
+  --accent: purple;
+
+  .card {
+    border-color: var(--accent, black);
+  }
+}
+
+/* A flat, unrelated-looking pair, but the descendant combinator in the
+   selector text itself proves the scope — no nesting needed. */
+.light-theme {
+  --surface: white;
+}
+
+.light-theme .panel {
+  background: var(--surface);
+}
+
+@property --radius {
+  syntax: "<length>";
+  inherits: false;
+  initial-value: 0px;
+}
+
+.rounded {
+  --radius: 8px;
+  border-radius: var(--radius);
+}

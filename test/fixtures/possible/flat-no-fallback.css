@@ -1,0 +1,12 @@
+/* --x is declared under a flat, unrelated selector (no nesting, no :root).
+   .card's real DOM ancestors might or might not include a .dark-theme
+   element — CSS alone cannot prove either way. Silent by default (VL001 is
+   "possible", suppressed); VL002 still fires by default because there is no
+   fallback. */
+.dark-theme {
+  --x: red;
+}
+
+.card {
+  color: var(--x);
+}

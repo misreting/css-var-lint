@@ -1,0 +1,5 @@
+/* --never-defined is declared nowhere in this project, and this reference
+   has no fallback: guaranteed invalid at computed-value time. */
+.card {
+  color: var(--never-defined);
+}
