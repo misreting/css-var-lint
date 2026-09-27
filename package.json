@@ -14,10 +14,10 @@
     "stylelint"
   ],
   "license": "MIT",
-  "author": "__AUTHOR__",
+  "author": "css-var-lint",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/__GH_OWNER__/css-var-lint.git"
+    "url": "git+https://github.com/agentscope-ai-java/css-var-lint.git"
   },
   "type": "module",
   "engines": {
